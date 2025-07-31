@@ -36,3 +36,16 @@ module.exports = router;
 - Response send --> Can send response
 
 - can be use between app and router or router and api
+
+** Types of Middleware in express
+- Application-level Middleware
+- Router-level Middleware
+- Error-handling Middleware
+- Built-in Middleware
+- Third-party Middleware
+
+Middleware --> 
+app.use((req, res, next) => {
+    console.log("Between App and Routes")
+    next()     //We have to call next 
+})

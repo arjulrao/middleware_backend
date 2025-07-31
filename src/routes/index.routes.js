@@ -2,12 +2,18 @@ const express = require('express');
 
 
 
-const router = express.Router();
+const router = express.Router();    //router
+
+router.use((req, res, next) => {
+    console.log("This middleware is between Router and API");
+    next();
+})
 
 
-router.get('/', (req, res) => {
+
+router.get('/', (req, res) => {     //API 
     res.json({
-        Message: "Welcome to the Middleware."
+        Message: "Hello Ji..."
     })
 })
 
